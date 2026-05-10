@@ -12,8 +12,7 @@ const links = [
   { href: "/services", label: "Services" },
   { href: "/tools", label: "Tools" },
   { href: "/about", label: "About" },
-  { href: "/library", label: "Library" },
-  { href: "/blog", label: "Blog" },
+  { href: "/library", label: "Blog" },
 ];
 
 export default function Nav() {

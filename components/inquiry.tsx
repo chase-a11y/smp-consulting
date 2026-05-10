@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Icon } from "./icons";
 import Reveal from "./reveal";
 
@@ -65,8 +65,16 @@ export default function Inquiry() {
   const canNext =
     (step === 0 && data.services.length > 0) ||
     (step === 1 && data.size && data.timeline) ||
-    (step === 2 && data.name && data.email && data.company) ||
+    (step === 2 && data.name && data.email) ||
     step === 3;
+
+  // Auto-advance step 2 when both size and timeline are selected
+  useEffect(() => {
+    if (step === 1 && data.size && data.timeline) {
+      const t = setTimeout(() => setStep(2), 400);
+      return () => clearTimeout(t);
+    }
+  }, [step, data.size, data.timeline]);
 
   const submit = async () => {
     setSubmitting(true);
@@ -264,7 +272,7 @@ export default function Inquiry() {
                     />
                   </div>
                   <div className="field">
-                    <label htmlFor="inq-company">Company / business name</label>
+                    <label htmlFor="inq-company">Company / business name <span style={{ color: "var(--muted)", fontWeight: 400 }}>(optional)</span></label>
                     <input
                       id="inq-company"
                       value={data.company}
@@ -304,24 +312,29 @@ export default function Inquiry() {
                 </button>
                 {step < STEPS - 1 ? (
                   <button
-                    className="btn btn-amber"
+                    className="btn btn-amber inq-next-btn"
                     disabled={!canNext}
                     style={{ opacity: canNext ? 1 : 0.4 }}
                     onClick={() => canNext && setStep((s) => s + 1)}
                   >
-                    Continue
+                    {step === 2 ? "Almost done" : "Next step"}
                     <Icon name="arrow-right" size={14} />
                   </button>
                 ) : (
-                  <button
-                    className="btn btn-amber"
-                    onClick={submit}
-                    disabled={submitting}
-                    style={{ opacity: submitting ? 0.6 : 1 }}
-                  >
-                    {submitting ? "Sending…" : "Send inquiry"}
-                    <Icon name="arrow-right" size={14} />
-                  </button>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 6 }}>
+                    <button
+                      className="btn btn-amber inq-next-btn"
+                      onClick={submit}
+                      disabled={submitting}
+                      style={{ opacity: submitting ? 0.6 : 1 }}
+                    >
+                      {submitting ? "Sending…" : "Send inquiry"}
+                      <Icon name="arrow-right" size={14} />
+                    </button>
+                    <span style={{ fontSize: 12, color: "var(--muted)", fontFamily: "var(--font-mono), ui-monospace, monospace" }}>
+                      We read every inquiry personally.
+                    </span>
+                  </div>
                 )}
               </div>
             </>

@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="hero-meta">
           <span className="eyebrow">
             <span className="dot"></span>Startup & small business consulting · Est.
-            2024
+            2026
           </span>
           <h1>
             <span className="ital">Strategy</span>.{" "}

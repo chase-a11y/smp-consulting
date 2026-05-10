@@ -83,30 +83,17 @@ function getTransformStyle(
 ): React.CSSProperties {
   switch (effect) {
     case "zoom-in": {
-      // Start at 1.08x, zoom to 1.0 as you scroll through
       const scale = 1.08 - progress * 0.08;
-      return {
-        transform: `scale(${scale})`,
-        willChange: "transform",
-      };
+      return { transform: `scale(${scale})` };
     }
     case "parallax": {
-      // Image moves slower than scroll — shift up to 40px
       const y = (0.5 - progress) * 40;
-      return {
-        transform: `translateY(${y}px)`,
-        willChange: "transform",
-      };
+      return { transform: `translateY(${y}px)` };
     }
     case "reveal-up": {
-      // Slides up and fades in from below
       const y = Math.max(0, (1 - progress * 2.5) * 30);
       const opacity = Math.min(1, progress * 2.5);
-      return {
-        transform: `translateY(${y}px)`,
-        opacity,
-        willChange: "transform, opacity",
-      };
+      return { transform: `translateY(${y}px)`, opacity };
     }
     default:
       return {};

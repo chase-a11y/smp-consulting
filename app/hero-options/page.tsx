@@ -111,7 +111,7 @@ function HeroContent({ bg }: { bg: string }) {
         <div className="hero-meta">
           <span className="eyebrow">
             <span className="dot"></span>Startup & small business consulting ·
-            Est. 2024
+            Est. 2026
           </span>
           <h1>
             Talk to your <span className="ital">customers</span>.

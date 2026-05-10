@@ -60,7 +60,7 @@ export default function LibraryGrid({ articles, categories }: Props) {
         })}
       </div>
 
-      <Reveal>
+      <Reveal threshold={0.02}>
         <div className="lib-grid">
           {filtered.map((article) => {
             const cat = getCatColor(article.category);

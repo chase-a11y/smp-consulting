@@ -43,7 +43,7 @@ export default function Work() {
 
         <Reveal delay={100}>
           <ScrollImage
-            src="/images/desk-journal.png"
+            src="/images/desk-journal.webp"
             alt="Rustic desk with open journal, coffee, and vintage camera in warm light"
             width={1024}
             height={1024}
