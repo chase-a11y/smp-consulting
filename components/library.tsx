@@ -30,9 +30,10 @@ export default function Library() {
         <Reveal>
           <div className="lib-head">
             <div>
-              <span className="eyebrow">
-                <span className="dot"></span>The Merchant Guide Library
-              </span>
+              <div className="tmg-mark">
+                <span className="tmg-icon">TMG</span>
+                <span className="tmg-label">The Merchant Guide</span>
+              </div>
               <h2 style={{ marginTop: 14 }}>
                 Most of what we know,{" "}
                 <em style={{ fontStyle: "italic" }}>free to read</em>.

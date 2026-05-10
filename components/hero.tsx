@@ -19,9 +19,9 @@ export default function Hero() {
           <p className="lede">
             Whether you&apos;re a startup finding your first customers or a small
             business ready to grow — the most important thing you can do is have
-            real conversations with the people you serve. We take operations,
-            customer acquisition, and revenue off your plate so you can focus on
-            what moves the needle.
+            real conversations with the people you serve. We take strategy,
+            margins, and people off your plate so you can focus on what moves
+            the needle.
           </p>
           <div className="hero-cta">
             <Link className="btn btn-amber" href="/contact">
@@ -33,9 +33,9 @@ export default function Hero() {
             </Link>
           </div>
           <div className="hero-tags">
-            <span>Operations & Growth</span>
-            <span>Customer Acquisition</span>
-            <span>Revenue & Payments</span>
+            <span>Strategy & Operations</span>
+            <span>Revenue & Margins</span>
+            <span>Team & People</span>
           </div>
         </div>
 

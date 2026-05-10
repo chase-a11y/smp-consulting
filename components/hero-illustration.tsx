@@ -142,7 +142,7 @@ export default function HeroIllustration() {
         </div>
       </div>
 
-      {/* ========== PEOPLE CARD (Customer growth) ========== */}
+      {/* ========== PEOPLE CARD (Team) ========== */}
       <div
         className={`hero-card card-receipt${flipped === "receipt" ? " flipped" : ""}`}
         onClick={() => toggleFlip("receipt")}
@@ -150,40 +150,46 @@ export default function HeroIllustration() {
         <div className="card-front">
           <div className="card-label">People</div>
           <div className="card-inner">
-            <div className="revenue-header">
-              <span className="revenue-amount">142</span>
-              <span className="revenue-change">+23%</span>
+            <div className="team-roster">
+              <div className="team-row">
+                <div className="team-avatar" style={{ background: "var(--pine)" }}>JR</div>
+                <div className="team-info">
+                  <span className="team-name">Jordan Reyes</span>
+                  <span className="team-role">Operations Lead</span>
+                </div>
+                <span className="team-status active">Active</span>
+              </div>
+              <div className="team-row">
+                <div className="team-avatar" style={{ background: "var(--ochre)" }}>KL</div>
+                <div className="team-info">
+                  <span className="team-name">Kim Lee</span>
+                  <span className="team-role">Sales Manager</span>
+                </div>
+                <span className="team-status active">Active</span>
+              </div>
+              <div className="team-row">
+                <div className="team-avatar" style={{ background: "var(--muted)" }}>DP</div>
+                <div className="team-info">
+                  <span className="team-name">Dana Park</span>
+                  <span className="team-role">Marketing</span>
+                </div>
+                <span className="team-status hiring">Hiring</span>
+              </div>
             </div>
-            <div className="revenue-period">New customers this quarter</div>
-            <svg className="revenue-chart" viewBox="0 0 200 80" fill="none" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="var(--ochre)" stopOpacity="0.25" />
-                  <stop offset="100%" stopColor="var(--ochre)" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M0 70 Q20 68 35 62 T70 48 T105 35 T140 22 T175 12 T200 5"
-                stroke="var(--ochre)"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                className="chart-line"
-              />
-              <path
-                d="M0 70 Q20 68 35 62 T70 48 T105 35 T140 22 T175 12 T200 5 L200 80 L0 80 Z"
-                fill="url(#chartFill)"
-                className="chart-area"
-              />
-            </svg>
-            <div className="revenue-months">
-              <span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span>
+            <div className="receipt-divider" />
+            <div className="payment-saved">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8" r="8" fill="#C8924B" />
+                <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              3 roles defined, 1 open
             </div>
           </div>
         </div>
         <div className="card-back">
           <div className="card-back-icon">&#x1F465;</div>
           <div className="card-back-title">People</div>
-          <div className="card-back-desc">Websites, SEO, and local presence that actually bring customers through the door.</div>
+          <div className="card-back-desc">Hire the right people, define roles that make sense, and build a team that stays.</div>
           <div className="card-back-hint">Click to flip back</div>
         </div>
       </div>

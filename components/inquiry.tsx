@@ -5,9 +5,9 @@ import { Icon } from "./icons";
 import Reveal from "./reveal";
 
 const SERVICES_OPTS = [
-  { id: "consulting", label: "Operations & Growth", note: "Operations, planning, hiring" },
-  { id: "marketing", label: "Customer Acquisition", note: "SEO, website, lead gen, email" },
-  { id: "payments", label: "Revenue & Payments", note: "Audits, RFPs, switchovers" },
+  { id: "strategy", label: "Strategy", note: "Operations, growth, marketing, customer acquisition" },
+  { id: "margins", label: "Margins", note: "Payment audits, fee negotiation, revenue" },
+  { id: "people", label: "People", note: "Hiring, roles, team alignment, culture" },
   { id: "unsure", label: "Not sure yet", note: "Help me figure it out" },
 ];
 
