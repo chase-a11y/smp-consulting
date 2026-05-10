@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" role="img" aria-label="SMP horizontal lockup">
+  <title>SMP — horizontal lockup</title>
+  <g transform="translate(60 90) scale(.55)">
+    <path d="M -100 50 L -100 30 L -58 -42 L -28 4 L 0 -52 L 28 4 L 58 -42 L 100 30 L 100 50 Z" fill="#1A1815"></path>
+  </g>
+  <line x1="135" y1="40" x2="135" y2="140" stroke="#D9D0BE" stroke-width="1"></line>
+  <text x="155" y="92" font-family="Newsreader, Georgia, serif" font-weight="600" font-size="48" letter-spacing="2" fill="#1A1815">SMP</text>
+  <text x="156" y="118" font-family="JetBrains Mono, ui-monospace, monospace" font-size="10" letter-spacing="3" fill="#6B5D4F">SMALL · MIDSIZE · PROVEN</text>
+</svg>

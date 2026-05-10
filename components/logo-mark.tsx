@@ -17,7 +17,7 @@ export default function LogoMark({
       style={{ display: "block" }}
     >
       <path
-        d="M -95 50 L -95 18 L -52 -22 L -28 5 L 0 -60 L 28 5 L 52 -22 L 95 18 L 95 50 L 62 50 L 62 18 L 52 5 L 28 30 L 0 -28 L -28 30 L -52 5 L -62 18 L -62 50 Z"
+        d="M -100 50 L -100 30 L -58 -42 L -28 4 L 0 -52 L 28 4 L 58 -42 L 100 30 L 100 50 Z"
         fill={fill}
       />
     </svg>

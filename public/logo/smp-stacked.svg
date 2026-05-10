@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="SMP stacked lockup">
+  <title>SMP — stacked lockup</title>
+  <g transform="translate(130 88) scale(.62)">
+    <path d="M -100 50 L -100 30 L -58 -42 L -28 4 L 0 -52 L 28 4 L 58 -42 L 100 30 L 100 50 Z" fill="#1A1815"></path>
+  </g>
+  <text x="130" y="195" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-weight="600" font-size="58" letter-spacing="2" fill="#1A1815">SMP</text>
+  <line x1="92" y1="212" x2="168" y2="212" stroke="#8B4F2E" stroke-width="1"></line>
+  <text x="130" y="230" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="9" letter-spacing="3" fill="#6B5D4F">CONSULTING · EST. 2026</text>
+</svg>

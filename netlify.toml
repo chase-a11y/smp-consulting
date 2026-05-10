@@ -7,6 +7,36 @@
   directory = "netlify/functions"
 
 [[redirects]]
+  from = "/blog"
+  to = "/library"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/"
+  to = "/library"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/color-demo"
+  to = "/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/hero-options"
+  to = "/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/resume-triage"
+  to = "/"
+  status = 302
+  force = true
+
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200

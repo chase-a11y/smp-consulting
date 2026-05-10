@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="SMP badge monogram">
+  <title>SMP — badge monogram</title>
+  <circle cx="80" cy="80" r="76" fill="none" stroke="#1A1815" stroke-width="2"></circle>
+  <g transform="translate(80 64) scale(.32)">
+    <path d="M -100 50 L -100 30 L -58 -42 L -28 4 L 0 -52 L 28 4 L 58 -42 L 100 30 L 100 50 Z" fill="#1A1815"></path>
+  </g>
+  <text x="80" y="118" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-weight="600" font-size="24" letter-spacing="2" fill="#1A1815">SMP</text>
+  <text x="80" y="138" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="7" letter-spacing="2.5" fill="#6B5D4F">EST · MMXXVI</text>
+</svg>
