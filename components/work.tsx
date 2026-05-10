@@ -82,7 +82,7 @@ export default function Work() {
                 borderTop: "1px dashed var(--line)",
                 fontFamily: "var(--font-mono), ui-monospace, monospace",
                 fontSize: 11,
-                color: "var(--amber-deep)",
+                color: "var(--ochre-deep)",
                 letterSpacing: ".06em",
                 display: "flex",
                 alignItems: "center",

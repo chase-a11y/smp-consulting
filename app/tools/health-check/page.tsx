@@ -101,7 +101,7 @@ export default function HealthCheck() {
                 </span>
                 <h1 style={{ marginTop: 14, fontSize: "clamp(32px, 4.5vw, 52px)" }}>
                   How healthy is your{" "}
-                  <em style={{ fontStyle: "italic", color: "var(--amber-deep)" }}>
+                  <em style={{ fontStyle: "italic", color: "var(--ochre-deep)" }}>
                     business
                   </em>
                   ?
@@ -259,7 +259,7 @@ export default function HealthCheck() {
                             c.score >= 75
                               ? "#4f6b34"
                               : c.score >= 50
-                              ? "var(--amber)"
+                              ? "var(--ochre)"
                               : "var(--rust)",
                         }}
                       />
@@ -370,7 +370,7 @@ export default function HealthCheck() {
                               c.score >= 75
                                 ? "#4f6b34"
                                 : c.score >= 50
-                                ? "var(--amber-deep)"
+                                ? "var(--ochre-deep)"
                                 : "var(--rust)",
                           }}
                         >
@@ -387,7 +387,7 @@ export default function HealthCheck() {
                             fontFamily: "var(--font-mono), ui-monospace, monospace",
                             fontSize: 12,
                             letterSpacing: ".06em",
-                            color: "var(--amber)",
+                            color: "var(--ochre)",
                           }}
                         >
                           Learn about our {c.pillar.toLowerCase()} services →

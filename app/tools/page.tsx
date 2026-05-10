@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const TOOLS = [
   {
     n: "01",
-    glyph: "H",
+    glyph: "S",
     title: "Business Health Check",
     href: "/tools/health-check",
     desc: "A 3-minute self-assessment across five areas of your business. Find out where you're strong — and where you're leaking time and money.",
@@ -19,19 +19,19 @@ const TOOLS = [
   },
   {
     n: "02",
-    glyph: "S",
-    title: "SOP Template Builder",
-    href: "/tools/sop-builder",
-    desc: "Pick your business type and operational area, and get a starter operating procedure you can use today. No signup required.",
-    tag: "Instant download",
-  },
-  {
-    n: "03",
-    glyph: "P",
+    glyph: "M",
     title: "Payment Fee Estimator",
     href: "/tools/fee-estimator",
     desc: "See what you're paying in processing fees vs what you should be paying. Upload your statement for a free audit.",
     tag: "Free statement audit",
+  },
+  {
+    n: "03",
+    glyph: "P",
+    title: "SOP Template Builder",
+    href: "/tools/sop-builder",
+    desc: "Pick your business type and operational area, and get a starter operating procedure you can use today. No signup required.",
+    tag: "Instant download",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function ToolsHub() {
                     fontFamily: "var(--font-mono), ui-monospace, monospace",
                     fontSize: 12,
                     letterSpacing: ".06em",
-                    color: "var(--amber)",
+                    color: "var(--ochre)",
                   }}
                 >
                   {t.tag} →

@@ -1,16 +1,19 @@
 import Link from "next/link";
+import LogoMark from "./logo-mark";
 
 export default function Footer() {
   return (
     <footer className="foot">
       <div className="wrap foot-grid">
         <div className="foot-brand">
-          <div className="word">
-            <span className="amb">SMP</span> Consulting
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <LogoMark size={24} fill="var(--cream)" />
+            <div className="word">
+              <span className="amb">SMP</span> Consulting
+            </div>
           </div>
           <p>
-            A consulting practice for startups and small businesses. Available
-            nationwide.
+            Small business operating partners. Available nationwide.
           </p>
           <div
             style={{

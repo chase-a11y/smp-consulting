@@ -11,42 +11,42 @@ export default function HeroOptions() {
           letter-spacing: .1em;
           text-transform: uppercase;
           font-weight: 600;
-          color: var(--amber-deep);
-          border-top: 3px solid var(--amber);
+          color: var(--ochre-deep);
+          border-top: 3px solid var(--ochre);
           margin-top: 24px;
         }
         .hero-v.on-dark .hero { color: var(--cream); }
         .hero-v.on-dark h1 { color: var(--cream); }
-        .hero-v.on-dark h1 .ital { color: var(--amber); }
-        .hero-v.on-dark .lede { color: rgba(243,233,200,.78); }
-        .hero-v.on-dark .eyebrow { color: rgba(243,233,200,.55); }
-        .hero-v.on-dark .eyebrow .dot { background: var(--amber); }
+        .hero-v.on-dark h1 .ital { color: var(--ochre); }
+        .hero-v.on-dark .lede { color: rgba(241,236,226,.78); }
+        .hero-v.on-dark .eyebrow { color: rgba(241,236,226,.55); }
+        .hero-v.on-dark .eyebrow .dot { background: var(--ochre); }
         .hero-v.on-dark .hero-tags span {
-          color: rgba(243,233,200,.65);
-          border-color: rgba(243,233,200,.2);
-          background: rgba(243,233,200,.08);
+          color: rgba(241,236,226,.65);
+          border-color: rgba(241,236,226,.2);
+          background: rgba(241,236,226,.08);
         }
         .hero-v.on-dark .hero-tags span:hover {
-          background: rgba(243,233,200,.15);
+          background: rgba(241,236,226,.15);
           color: var(--cream);
-          border-color: rgba(243,233,200,.3);
+          border-color: rgba(241,236,226,.3);
         }
         .hero-v.on-dark .hero-bar {
-          border-color: rgba(243,233,200,.18);
+          border-color: rgba(241,236,226,.18);
           background: rgba(0,0,0,.12);
         }
-        .hero-v.on-dark .hero-bar-item { border-color: rgba(243,233,200,.18); }
-        .hero-v.on-dark .hero-bar-item .k { color: rgba(243,233,200,.55); }
+        .hero-v.on-dark .hero-bar-item { border-color: rgba(241,236,226,.18); }
+        .hero-v.on-dark .hero-bar-item .k { color: rgba(241,236,226,.55); }
         .hero-v.on-dark .hero-bar-item .v { color: var(--cream); }
         .hero-v.on-dark .btn-ghost {
           color: var(--cream);
-          border-color: rgba(243,233,200,.3);
+          border-color: rgba(241,236,226,.3);
         }
         .hero-v.on-dark .btn-ghost:hover {
-          background: rgba(243,233,200,.1);
+          background: rgba(241,236,226,.1);
         }
-        .hero-v.on-dark .storefront { border-color: rgba(243,233,200,.2); }
-        .hero-v.on-dark .sf-caption { color: rgba(243,233,200,.4); }
+        .hero-v.on-dark .storefront { border-color: rgba(241,236,226,.2); }
+        .hero-v.on-dark .sf-caption { color: rgba(241,236,226,.4); }
         .hero-v .hero .eyebrow,
         .hero-v .hero h1,
         .hero-v .hero .lede,
@@ -75,7 +75,7 @@ export default function HeroOptions() {
       {/* A: Olive/Sage */}
       <div className="wrap"><div className="variant-label">A — Olive / Sage</div></div>
       <div className="hero-v on-dark">
-        <HeroContent bg="var(--olive)" />
+        <HeroContent bg="var(--pine)" />
       </div>
 
       {/* B: Dark Ink */}
@@ -93,7 +93,7 @@ export default function HeroOptions() {
       {/* D: Gradient (Olive → Paper) */}
       <div className="wrap"><div className="variant-label">D — Gradient (Olive → Paper)</div></div>
       <div className="hero-v on-dark">
-        <HeroContent bg="linear-gradient(180deg, var(--olive-deep) 0%, var(--olive) 40%, var(--olive-soft) 70%, var(--paper) 100%)" />
+        <HeroContent bg="linear-gradient(180deg, var(--pine-deep) 0%, var(--pine) 40%, var(--pine-soft) 70%, var(--paper) 100%)" />
       </div>
 
       <div style={{ height: 80, background: "var(--cream)" }} />

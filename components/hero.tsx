@@ -12,9 +12,9 @@ export default function Hero() {
             2024
           </span>
           <h1>
-            Talk to your <span className="ital">customers</span>.
-            <br />
-            We&apos;ll handle the rest.
+            <span className="ital">Strategy</span>.{" "}
+            <span className="mono-word">Margins</span>.{" "}
+            <span className="human">People</span>.
           </h1>
           <p className="lede">
             Whether you&apos;re a startup finding your first customers or a small

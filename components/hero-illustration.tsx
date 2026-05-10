@@ -8,24 +8,8 @@ export default function HeroIllustration() {
   const ref = useRef<HTMLDivElement>(null);
   const [checked, setChecked] = useState([true, true, true, false, false]);
   const [flipped, setFlipped] = useState<string | null>(null);
-  const [urlText, setUrlText] = useState("");
 
   const checkedCount = checked.filter(Boolean).length;
-
-  // Typewriter effect for URL bar
-  useEffect(() => {
-    const full = "yourbusiness.com";
-    let i = 0;
-    const timer = setTimeout(() => {
-      const interval = setInterval(() => {
-        i++;
-        setUrlText(full.slice(0, i));
-        if (i >= full.length) clearInterval(interval);
-      }, 60);
-      return () => clearInterval(interval);
-    }, 1200);
-    return () => clearTimeout(timer);
-  }, []);
 
   // Mouse-follow parallax tilt
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -72,13 +56,13 @@ export default function HeroIllustration() {
 
   return (
     <div ref={ref} className="hero-cards" aria-hidden="true">
-      {/* ========== CHECKLIST CARD ========== */}
+      {/* ========== STRATEGY CARD (Checklist) ========== */}
       <div
         className={`hero-card card-checklist${flipped === "checklist" ? " flipped" : ""}`}
         onClick={() => toggleFlip("checklist")}
       >
         <div className="card-front">
-          <div className="card-label">Operations</div>
+          <div className="card-label">Strategy</div>
           <div className="card-inner">
             {CHECKLIST.map((item, i) => (
               <div
@@ -108,55 +92,19 @@ export default function HeroIllustration() {
         </div>
         <div className="card-back">
           <div className="card-back-icon">&#x2714;</div>
-          <div className="card-back-title">Operations & Growth</div>
+          <div className="card-back-title">Strategy</div>
           <div className="card-back-desc">We map your processes, find the bottlenecks, and build a plan to fix them.</div>
           <div className="card-back-hint">Click to flip back</div>
         </div>
       </div>
 
-      {/* ========== BROWSER CARD ========== */}
+      {/* ========== MARGINS CARD (Payment receipt) ========== */}
       <div
         className={`hero-card card-browser${flipped === "browser" ? " flipped" : ""}`}
         onClick={() => toggleFlip("browser")}
       >
         <div className="card-front">
-          <div className="browser-bar">
-            <span className="dot-r" />
-            <span className="dot-y" />
-            <span className="dot-g" />
-            <span className="url-bar">
-              {urlText}
-              <span className="url-cursor">|</span>
-            </span>
-          </div>
-          <div className="card-inner">
-            <div className="browser-hero-img">
-              <div className="browser-shimmer" />
-            </div>
-            <div className="browser-lines">
-              <div className="skel-line w80" />
-              <div className="skel-line w60" />
-              <div className="skel-line w70" />
-            </div>
-            <div className="browser-cta">Get Started</div>
-          </div>
-          <div className="card-label browser-label">Marketing</div>
-        </div>
-        <div className="card-back">
-          <div className="card-back-icon">&#x1F310;</div>
-          <div className="card-back-title">Customer Acquisition</div>
-          <div className="card-back-desc">Websites, SEO, and local presence that actually bring customers through the door.</div>
-          <div className="card-back-hint">Click to flip back</div>
-        </div>
-      </div>
-
-      {/* ========== PAYMENT CARD ========== */}
-      <div
-        className={`hero-card card-receipt${flipped === "receipt" ? " flipped" : ""}`}
-        onClick={() => toggleFlip("receipt")}
-      >
-        <div className="card-front">
-          <div className="card-label">Revenue</div>
+          <div className="card-label">Margins</div>
           <div className="card-inner">
             <div className="payment-amount">$4,280</div>
             <div className="payment-status">
@@ -179,7 +127,7 @@ export default function HeroIllustration() {
             <div className="receipt-divider" />
             <div className="payment-saved">
               <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
-                <circle cx="8" cy="8" r="8" fill="#d4a04a" />
+                <circle cx="8" cy="8" r="8" fill="#C8924B" />
                 <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               You saved $47 vs. old rate
@@ -188,8 +136,54 @@ export default function HeroIllustration() {
         </div>
         <div className="card-back">
           <div className="card-back-icon">&#x1F4B3;</div>
-          <div className="card-back-title">Revenue & Payments</div>
+          <div className="card-back-title">Margins</div>
           <div className="card-back-desc">We audit your processing setup and cut the junk fees you didn&apos;t know about.</div>
+          <div className="card-back-hint">Click to flip back</div>
+        </div>
+      </div>
+
+      {/* ========== PEOPLE CARD (Customer growth) ========== */}
+      <div
+        className={`hero-card card-receipt${flipped === "receipt" ? " flipped" : ""}`}
+        onClick={() => toggleFlip("receipt")}
+      >
+        <div className="card-front">
+          <div className="card-label">People</div>
+          <div className="card-inner">
+            <div className="revenue-header">
+              <span className="revenue-amount">142</span>
+              <span className="revenue-change">+23%</span>
+            </div>
+            <div className="revenue-period">New customers this quarter</div>
+            <svg className="revenue-chart" viewBox="0 0 200 80" fill="none" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="var(--ochre)" stopOpacity="0.25" />
+                  <stop offset="100%" stopColor="var(--ochre)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M0 70 Q20 68 35 62 T70 48 T105 35 T140 22 T175 12 T200 5"
+                stroke="var(--ochre)"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                className="chart-line"
+              />
+              <path
+                d="M0 70 Q20 68 35 62 T70 48 T105 35 T140 22 T175 12 T200 5 L200 80 L0 80 Z"
+                fill="url(#chartFill)"
+                className="chart-area"
+              />
+            </svg>
+            <div className="revenue-months">
+              <span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span>
+            </div>
+          </div>
+        </div>
+        <div className="card-back">
+          <div className="card-back-icon">&#x1F465;</div>
+          <div className="card-back-title">People</div>
+          <div className="card-back-desc">Websites, SEO, and local presence that actually bring customers through the door.</div>
           <div className="card-back-hint">Click to flip back</div>
         </div>
       </div>

@@ -59,7 +59,7 @@ export default function AboutPage() {
         eyebrow="About us"
         title="Built to stay small, built to stay"
         titleEmphasis="honest"
-        lede="SMP Consulting is a small consulting practice — not a big agency. We work directly with business owners on the stuff that actually matters: operations, customer acquisition, and revenue."
+        lede="SMP Consulting is a small consulting practice — not a big agency. We work directly with business owners on strategy, margins, and people."
       />
 
       {/* Origin story */}
@@ -78,12 +78,9 @@ export default function AboutPage() {
             <div className="honest-card" style={{ marginTop: 36 }}>
               <span className="stamp">The origin</span>
               <p>
-                SMP started as a simple comparison tool. Chase
-                Morgan had spent years in the payments industry and kept hearing
-                the same thing from business owners: &ldquo;I have no idea if
-                I&apos;m getting a good deal on processing.&rdquo; So he built a
-                resource to help people compare rates, read the fine print, and
-                stop overpaying.
+                SMP started as a simple comparison tool to help businesses
+                compare payment processors — because too many owners were
+                overpaying and didn&apos;t know it.
               </p>
               <p>
                 But the conversations never stayed on payments. Business owners
@@ -95,15 +92,15 @@ export default function AboutPage() {
               <p>
                 That&apos;s how SMP Consulting became what it is today: a
                 small, hands-on consulting practice that helps small businesses
-                make better decisions about the things that cost them the most
-                money and time. No big team, no overhead, no fluff. Just direct
-                work with people who run businesses.
+                make better decisions about strategy, margins, and people. No
+                big team, no overhead, no fluff. Just direct work with people
+                who run businesses.
               </p>
               <div className="signature">
-                <div className="avatar">C</div>
+                <div className="avatar">S</div>
                 <div>
-                  <div className="name">Chase Morgan</div>
-                  <div className="role">Founder</div>
+                  <div className="name">Simpson, Morgan &amp; Powell</div>
+                  <div className="role">Cofounders · SMP Consulting</div>
                 </div>
               </div>
             </div>

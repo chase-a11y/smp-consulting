@@ -248,8 +248,8 @@ export const CATEGORIES: Category[] = [
 
 export function getGrade(score: number): { letter: string; color: string } {
   if (score >= 85) return { letter: "A", color: "#4f6b34" };
-  if (score >= 70) return { letter: "B", color: "var(--amber-deep)" };
-  if (score >= 50) return { letter: "C", color: "var(--amber)" };
+  if (score >= 70) return { letter: "B", color: "var(--ochre-deep)" };
+  if (score >= 50) return { letter: "C", color: "var(--ochre)" };
   return { letter: "D", color: "var(--rust)" };
 }
 

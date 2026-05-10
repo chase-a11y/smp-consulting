@@ -31,7 +31,7 @@ export default function Library() {
           <div className="lib-head">
             <div>
               <span className="eyebrow">
-                <span className="dot"></span>The Library
+                <span className="dot"></span>The Merchant Guide Library
               </span>
               <h2 style={{ marginTop: 14 }}>
                 Most of what we know,{" "}
@@ -39,7 +39,8 @@ export default function Library() {
               </h2>
               <p className="lede" style={{ marginTop: 18 }}>
                 Guides and playbooks we wrote for small business owners. No
-                newsletter wall, no &ldquo;download to read more.&rdquo;
+                newsletter wall, no &ldquo;download to read more.&rdquo; Just
+                straight answers.
               </p>
             </div>
             <div style={{

@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useCallback } from "react";
 import { Icon } from "./icons";
+import LogoMark from "./logo-mark";
 
 const SECTIONS = ["services", "approach", "library", "work", "inquiry"];
 
@@ -62,7 +62,7 @@ export default function Nav() {
             }
           }}
         >
-          <Image src="/images/logo-mark.png" alt="SMP Consulting logo" width={30} height={30} />
+          <LogoMark size={28} fill="var(--cream)" />
           <span className="word">
             <span className="amb">SMP</span> Consulting
           </span>

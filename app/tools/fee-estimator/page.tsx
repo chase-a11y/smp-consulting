@@ -127,7 +127,7 @@ export default function FeeEstimator() {
             </span>
             <h1 style={{ marginTop: 14, fontSize: "clamp(32px, 4.5vw, 56px)" }}>
               Are you overpaying on{" "}
-              <em style={{ fontStyle: "italic", color: "var(--amber-deep)" }}>processing</em>?
+              <em style={{ fontStyle: "italic", color: "var(--ochre-deep)" }}>processing</em>?
             </h1>
             <p className="lede" style={{ marginTop: 18, maxWidth: "56ch" }}>
               Most businesses are. Plug in your numbers and see how your rate
@@ -430,7 +430,7 @@ export default function FeeEstimator() {
                 <div style={{ textAlign: "center", padding: "48px 0" }}>
                   <div style={{
                     width: 56, height: 56, borderRadius: "50%",
-                    background: "var(--amber)", color: "#2b1f08",
+                    background: "var(--ochre)", color: "#2b1f08",
                     display: "grid", placeItems: "center",
                     margin: "0 auto 20px",
                   }}>
@@ -450,7 +450,7 @@ export default function FeeEstimator() {
                       fontFamily: "var(--font-mono), ui-monospace, monospace",
                       fontSize: 12,
                       letterSpacing: ".06em",
-                      color: "var(--amber)",
+                      color: "var(--ochre)",
                     }}
                   >
                     ← Back to tools

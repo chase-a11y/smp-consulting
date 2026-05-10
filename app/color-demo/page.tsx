@@ -57,7 +57,7 @@ body.warm-mode .hero {
   ) !important;
   border-bottom-color: rgba(31, 29, 20, 0.06);
 }
-body.warm-mode .hero h1 .ital { color: var(--amber); }
+body.warm-mode .hero h1 .ital { color: var(--ochre); }
 body.warm-mode .hero-bar {
   background: rgba(212, 160, 74, 0.06);
   border-color: rgba(31, 29, 20, 0.08);
@@ -82,9 +82,9 @@ body.warm-mode .svc-card:hover {
   background: #fff9ec;
   box-shadow: 0 4px 20px rgba(212, 160, 74, 0.1);
 }
-body.warm-mode .svc-card .glyph { background: var(--amber); color: #2b1f08; }
-body.warm-mode .svc-card .tick { color: var(--amber); }
-body.warm-mode .svc-card a { color: var(--amber-deep) !important; }
+body.warm-mode .svc-card .glyph { background: var(--ochre); color: #2b1f08; }
+body.warm-mode .svc-card .tick { color: var(--ochre); }
+body.warm-mode .svc-card a { color: var(--ochre-deep) !important; }
 
 /* --- Approach: warm latte instead of olive --- */
 body.warm-mode .approach {
@@ -99,18 +99,18 @@ body.warm-mode .honest-card {
   background: rgba(247, 241, 222, 0.7);
   border-color: rgba(31, 29, 20, 0.08);
 }
-body.warm-mode .honest-card .stamp { background: var(--amber); color: #2b1f08; }
+body.warm-mode .honest-card .stamp { background: var(--ochre); color: #2b1f08; }
 body.warm-mode .honest-card h4 { color: var(--ink) !important; }
 body.warm-mode .honest-card p { color: var(--ink-2); }
 body.warm-mode .signature { border-top-color: rgba(31, 29, 20, 0.08); }
-body.warm-mode .signature .avatar { background: var(--amber); color: #2b1f08; }
+body.warm-mode .signature .avatar { background: var(--ochre); color: #2b1f08; }
 body.warm-mode .signature .name { color: var(--ink); }
 body.warm-mode .signature .role { color: var(--muted); }
 body.warm-mode .principle { border-bottom-color: rgba(31, 29, 20, 0.08); }
 body.warm-mode .principle .pn { color: rgba(31, 29, 20, 0.25); }
 body.warm-mode .principle h4 { color: var(--ink) !important; }
 body.warm-mode .principle p { color: var(--ink-2) !important; }
-body.warm-mode .approach a { color: var(--amber-deep) !important; }
+body.warm-mode .approach a { color: var(--ochre-deep) !important; }
 
 /* --- Library: back to base warm cream --- */
 body.warm-mode .library {
@@ -122,9 +122,9 @@ body.warm-mode .lib-tab {
   color: var(--muted);
 }
 body.warm-mode .lib-tab.active {
-  background: var(--amber);
+  background: var(--ochre);
   color: #2b1f08;
-  border-color: var(--amber);
+  border-color: var(--ochre);
 }
 body.warm-mode .lib-card {
   background: #faf5e4;
@@ -134,14 +134,14 @@ body.warm-mode .lib-card:hover {
   background: #fff9ec;
   box-shadow: 0 4px 20px rgba(212, 160, 74, 0.1);
 }
-body.warm-mode .lib-card .kind .pill { background: var(--amber); color: #2b1f08; }
+body.warm-mode .lib-card .kind .pill { background: var(--ochre); color: #2b1f08; }
 body.warm-mode .lib-card.feature {
   background: #faf5e4;
   border-color: rgba(31, 29, 20, 0.08);
   box-shadow: 0 4px 24px rgba(212, 160, 74, 0.12);
 }
 body.warm-mode .lib-card.feature .feature-art {
-  background: var(--amber);
+  background: var(--ochre);
 }
 
 /* --- Work: gentle warm tint (matches approach) --- */
@@ -156,11 +156,11 @@ body.warm-mode .work-row .arrow {
   color: var(--ink);
 }
 body.warm-mode .work-row:hover .arrow {
-  background: var(--amber);
+  background: var(--ochre);
   color: #2b1f08;
-  border-color: var(--amber);
+  border-color: var(--ochre);
 }
-body.warm-mode .work a { color: var(--amber-deep); }
+body.warm-mode .work a { color: var(--ochre-deep); }
 
 /* --- Inquiry: warm sand instead of olive-deep --- */
 body.warm-mode .inquiry {
@@ -184,7 +184,7 @@ body.warm-mode .inq-card {
   background: #f7f1de;
   color: var(--ink);
 }
-body.warm-mode .inq-progress span.done { background: var(--amber); }
+body.warm-mode .inq-progress span.done { background: var(--ochre); }
 
 /* --- Footer: warm dark brown, not pure black --- */
 body.warm-mode .foot {
@@ -195,7 +195,7 @@ body.warm-mode .foot {
 body.warm-mode .foot a { color: rgba(243, 233, 200, 0.82); }
 body.warm-mode .foot a:hover { color: var(--cream); }
 body.warm-mode .foot-brand .word { color: var(--cream); }
-body.warm-mode .foot-brand .word .amb { color: var(--amber); }
+body.warm-mode .foot-brand .word .amb { color: var(--ochre); }
 body.warm-mode .foot-brand p { color: rgba(243, 233, 200, 0.5); }
 body.warm-mode .foot-col h5 { color: rgba(243, 233, 200, 0.45); }
 body.warm-mode .foot-bottom {
@@ -205,9 +205,9 @@ body.warm-mode .foot-bottom {
 
 /* --- Buttons: amber primary, warm ghost --- */
 body.warm-mode .btn-on-olive {
-  background: var(--amber);
+  background: var(--ochre);
   color: #2b1f08;
-  border-color: var(--amber);
+  border-color: var(--ochre);
 }
 body.warm-mode .btn-ghost {
   color: var(--ink);

@@ -54,25 +54,25 @@ export default function Approach() {
           />
 
           <div className="honest-card" style={{ marginTop: 36 }}>
-            <span className="stamp">A note from the founder</span>
+            <span className="stamp">A note from the founders</span>
             <h4>
-              &ldquo;I&apos;d rather do great work for a few businesses than
+              &ldquo;We&apos;d rather do great work for a few businesses than
               mediocre work for a lot of them.&rdquo;
             </h4>
             <p>
-              I started what became SMP as a tool to help businesses compare
-              payment processors. The more I talked to founders and owners, the
-              more I realized: they didn&apos;t have a strategy problem. They had
-              a bandwidth problem. They knew what mattered — talking to
-              customers, closing deals, building something real — they just
-              couldn&apos;t get to it because everything else was in the way. So I
-              built a practice around clearing the path.
+              SMP started as a tool to help businesses compare payment
+              processors. The more we talked to founders and owners, the more
+              we realized: they didn&apos;t have a strategy problem. They had a
+              bandwidth problem. They knew what mattered — talking to customers,
+              closing deals, building something real — they just couldn&apos;t
+              get to it because everything else was in the way. So we built a
+              practice around clearing the path.
             </p>
             <div className="signature">
-              <div className="avatar">C</div>
+              <div className="avatar">S</div>
               <div>
-                <div className="name">Chase Morgan</div>
-                <div className="role">Founder · SMP Consulting</div>
+                <div className="name">Simpson, Morgan &amp; Powell</div>
+                <div className="role">Cofounders · SMP Consulting</div>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function Approach() {
                 fontFamily: "var(--font-mono), ui-monospace, monospace",
                 fontSize: 12,
                 letterSpacing: ".06em",
-                color: "var(--amber)",
+                color: "var(--ochre)",
                 textDecoration: "none",
               }}
             >

@@ -49,7 +49,7 @@ export default function SOPBuilder() {
             </span>
             <h1 style={{ marginTop: 14, fontSize: "clamp(32px, 4.5vw, 52px)" }}>
               Build a{" "}
-              <em style={{ fontStyle: "italic", color: "var(--amber-deep)" }}>
+              <em style={{ fontStyle: "italic", color: "var(--ochre-deep)" }}>
                 starter SOP
               </em>{" "}
               in 60 seconds.
