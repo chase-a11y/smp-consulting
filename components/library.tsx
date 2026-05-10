@@ -1,0 +1,98 @@
+import Link from "next/link";
+import { Icon } from "./icons";
+import Reveal from "./reveal";
+import { getAllArticles, getCategoryVisual } from "@/lib/articles";
+
+// Show one article from each category for variety on the homepage
+const FEATURED_SLUGS = [
+  "competitor-ranks-above-me",     // Getting Found
+  "people-leave-in-seconds",       // Website
+  "ads-not-converting",            // Lead Gen
+  "posting-daily-no-results",      // Social Media
+  "emails-not-getting-opened",     // Email & Retention
+  "guilty-about-raising-prices",   // Running the Business
+];
+
+export default function Library() {
+  const allArticles = getAllArticles();
+  // Show featured articles first, then fill to 6 if any slug is missing
+  const featured = FEATURED_SLUGS
+    .map((slug) => allArticles.find((a) => a.slug === slug))
+    .filter(Boolean);
+
+  const articles = featured.length >= 6
+    ? featured.slice(0, 6)
+    : [...featured, ...allArticles.filter((a) => !FEATURED_SLUGS.includes(a.slug))].slice(0, 6);
+
+  return (
+    <section className="library section" id="library">
+      <div className="wrap">
+        <Reveal>
+          <div className="lib-head">
+            <div>
+              <span className="eyebrow">
+                <span className="dot"></span>The Library
+              </span>
+              <h2 style={{ marginTop: 14 }}>
+                Most of what we know,{" "}
+                <em style={{ fontStyle: "italic" }}>free to read</em>.
+              </h2>
+              <p className="lede" style={{ marginTop: 18 }}>
+                Guides and playbooks we wrote for small business owners. No
+                newsletter wall, no &ldquo;download to read more.&rdquo;
+              </p>
+            </div>
+            <div style={{
+              fontFamily: "var(--font-mono), ui-monospace, monospace",
+              fontSize: 12,
+              letterSpacing: ".06em",
+              color: "var(--muted)",
+              alignSelf: "end",
+            }}>
+              {allArticles.length} articles
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={150}>
+          <div className="lib-grid">
+            {articles.map((article) => {
+              const vis = getCategoryVisual(article!.category);
+              return (
+                <Link
+                  key={article!.slug}
+                  href={`/library/${article!.slug}`}
+                  className="lib-card"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <div className="lib-card-img" style={{ background: vis.bg }}>
+                    <div className={`lib-card-pattern ${vis.pattern}`} />
+                  </div>
+                  <div className="lib-card-body">
+                    <div className="kind">
+                      <span className="pill">{article!.category}</span>
+                    </div>
+                    <h4>{article!.title}</h4>
+                    <p>{article!.meta_description}</p>
+                    <div className="meta">
+                      <span>
+                        Read <span className="arr">&rarr;</span>
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </Reveal>
+
+        <div style={{ marginTop: 36, display: "flex", justifyContent: "center" }}>
+          <Link href="/library" className="btn btn-ghost">
+            Browse the Library
+            <Icon name="arrow-right" size={14} />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
