@@ -5,20 +5,20 @@ import Link from "next/link";
 import Reveal from "@/components/reveal";
 import type { ArticleMeta } from "@/lib/articles";
 
-// Mirrors CATEGORY_VISUALS from lib/articles.ts (can't import fs-dependent module in client)
-const CAT_VIS: Record<string, { bg: string; pattern: string }> = {
-  "Getting Found": { bg: "linear-gradient(135deg, #3d4030 0%, #5d6240 60%, #7a8050 100%)", pattern: "cat-grid" },
-  "Website": { bg: "linear-gradient(160deg, #2a3325 0%, #4a5a3a 50%, #5d6240 100%)", pattern: "cat-code" },
-  "Lead Gen": { bg: "linear-gradient(135deg, #4a3a20 0%, #8b6f3a 50%, #d4a04a 100%)", pattern: "cat-chart" },
-  "Local Marketing": { bg: "linear-gradient(150deg, #3d4030 0%, #5d6240 40%, #8b7d50 100%)", pattern: "cat-pin" },
-  "Social Media": { bg: "linear-gradient(135deg, #3a3020 0%, #6b5a40 50%, #a08050 100%)", pattern: "cat-circles" },
-  "Email & Retention": { bg: "linear-gradient(160deg, #2d3328 0%, #4a5040 50%, #6b7d5a 100%)", pattern: "cat-lines" },
-  "AI & Small Business": { bg: "linear-gradient(135deg, #1f2a1f 0%, #3a4a3a 50%, #5d6a50 100%)", pattern: "cat-dots" },
-  "Running the Business": { bg: "linear-gradient(150deg, #2d2515 0%, #5a4a30 50%, #8b7040 100%)", pattern: "cat-blocks" },
+// Category accent colors (mirrors getCategoryColor in lib/articles.ts)
+const CAT_COLORS: Record<string, { color: string; bg: string }> = {
+  "Getting Found":        { color: "#2C5E3F", bg: "rgba(44, 94, 63, 0.10)" },
+  "Website":              { color: "#2D4A6B", bg: "rgba(45, 74, 107, 0.10)" },
+  "Lead Gen":             { color: "#9A6E2E", bg: "rgba(200, 146, 75, 0.12)" },
+  "Local Marketing":      { color: "#7A5A4A", bg: "rgba(122, 90, 74, 0.10)" },
+  "Social Media":         { color: "#7A3A60", bg: "rgba(122, 58, 96, 0.10)" },
+  "Email & Retention":    { color: "#4A5570", bg: "rgba(74, 85, 112, 0.10)" },
+  "AI & Small Business":  { color: "#4A4A6B", bg: "rgba(74, 74, 107, 0.10)" },
+  "Running the Business": { color: "#8B6040", bg: "rgba(139, 96, 64, 0.12)" },
 };
 
-function getVis(cat: string) {
-  return CAT_VIS[cat] || { bg: "linear-gradient(135deg, #3d4030 0%, #5d6240 100%)", pattern: "cat-grid" };
+function getCatColor(cat: string) {
+  return CAT_COLORS[cat] || { color: "var(--muted)", bg: "rgba(107, 93, 79, 0.10)" };
 }
 
 interface Props {
@@ -36,43 +36,44 @@ export default function LibraryGrid({ articles, categories }: Props) {
   return (
     <>
       <div className="lib-tabs" style={{ marginBottom: 32 }}>
-        {tabs.map((t) => (
-          <button
-            key={t}
-            className={"lib-tab " + (tab === t ? "active" : "")}
-            onClick={() => setTab(t)}
-          >
-            {t}
-            {t !== "All" && (
-              <span style={{
-                marginLeft: 6,
-                fontSize: 11,
-                opacity: 0.6,
-              }}>
-                {articles.filter((a) => a.category === t).length}
-              </span>
-            )}
-          </button>
-        ))}
+        {tabs.map((t) => {
+          const catColor = t !== "All" ? getCatColor(t) : null;
+          return (
+            <button
+              key={t}
+              className={"lib-tab " + (tab === t ? "active" : "")}
+              onClick={() => setTab(t)}
+              style={tab === t && catColor ? { background: catColor.color, borderColor: catColor.color } : undefined}
+            >
+              {t}
+              {t !== "All" && (
+                <span style={{
+                  marginLeft: 6,
+                  fontSize: 11,
+                  opacity: 0.6,
+                }}>
+                  {articles.filter((a) => a.category === t).length}
+                </span>
+              )}
+            </button>
+          );
+        })}
       </div>
 
       <Reveal>
         <div className="lib-grid">
           {filtered.map((article) => {
-            const vis = getVis(article.category);
+            const cat = getCatColor(article.category);
             return (
               <Link
                 key={article.slug}
                 href={`/library/${article.slug}`}
                 className="lib-card"
-                style={{ textDecoration: "none", color: "inherit" }}
+                style={{ textDecoration: "none", color: "inherit", borderLeftColor: cat.color }}
               >
-                <div className="lib-card-img" style={{ background: vis.bg }}>
-                  <div className={`lib-card-pattern ${vis.pattern}`} />
-                </div>
                 <div className="lib-card-body">
                   <div className="kind">
-                    <span className="pill">{article.category}</span>
+                    <span className="pill" style={{ background: cat.bg, color: cat.color }}>{article.category}</span>
                   </div>
                   <h4>{article.title}</h4>
                   <p>{article.meta_description}</p>

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getAllArticles, getArticleBySlug, getCategoryVisual } from "@/lib/articles";
+import { getAllArticles, getArticleBySlug, getCategoryColor } from "@/lib/articles";
 import { Icon } from "@/components/icons";
 import Reveal from "@/components/reveal";
 
@@ -25,14 +25,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Map categories to relevant service pages
 const CATEGORY_CTA: Record<string, { label: string; href: string }> = {
-  "Getting Found": { label: "customer acquisition", href: "/services/marketing" },
-  "Website": { label: "customer acquisition", href: "/services/marketing" },
-  "Lead Gen": { label: "customer acquisition", href: "/services/marketing" },
-  "Local Marketing": { label: "customer acquisition", href: "/services/marketing" },
-  "Social Media": { label: "customer acquisition", href: "/services/marketing" },
-  "Email & Retention": { label: "customer acquisition", href: "/services/marketing" },
-  "AI & Small Business": { label: "operations & growth", href: "/services/consulting" },
-  "Running the Business": { label: "operations & growth", href: "/services/consulting" },
+  "Getting Found": { label: "Strategy", href: "/services/consulting" },
+  "Website": { label: "Strategy", href: "/services/consulting" },
+  "Lead Gen": { label: "Strategy", href: "/services/consulting" },
+  "Local Marketing": { label: "Strategy", href: "/services/consulting" },
+  "Social Media": { label: "Strategy", href: "/services/consulting" },
+  "Email & Retention": { label: "Strategy", href: "/services/consulting" },
+  "AI & Small Business": { label: "Strategy", href: "/services/consulting" },
+  "Running the Business": { label: "Strategy", href: "/services/consulting" },
 };
 
 export default async function ArticlePage({ params }: Props) {
@@ -45,7 +45,7 @@ export default async function ArticlePage({ params }: Props) {
     href: "/services",
   };
 
-  const vis = getCategoryVisual(article.category);
+  const cat = getCategoryColor(article.category);
 
   return (
     <article className="article-page">
@@ -58,10 +58,7 @@ export default async function ArticlePage({ params }: Props) {
             >
               &larr; The Library
             </Link>
-            <div className="article-hero-img" style={{ background: vis.bg }}>
-              <div className={`lib-card-pattern ${vis.pattern}`} />
-            </div>
-            <span className="pill" style={{ marginTop: 20, display: "inline-block" }}>
+            <span className="pill" style={{ marginTop: 20, display: "inline-block", background: cat.bg, color: cat.color }}>
               {article.category}
             </span>
             <h1 className="article-title">{article.title}</h1>

@@ -423,180 +423,23 @@ p { margin: 0; }
 .lib-card {
   grid-column: span 12;
   background: var(--paper-2);
-  border: 1px solid var(--line); border-radius: 12px;
-  min-height: 220px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--muted);
+  border-radius: 2px 12px 12px 2px;
   display: flex; flex-direction: column;
-  transition: transform 0.2s, background 0.2s;
-  position: relative; overflow: hidden;
-}
-.lib-card-img {
-  width: 100%; height: 140px;
-  border-radius: 12px 12px 0 0;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
   position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
 }
-.lib-card-pattern {
-  position: absolute;
-  inset: 0;
-  opacity: 0.4;
-}
-/* Grid pattern — Getting Found */
-.cat-grid {
-  background-image:
-    linear-gradient(rgba(241,236,226,0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(241,236,226,0.3) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-.cat-grid::after {
-  content: "";
-  position: absolute;
-  width: 40px; height: 40px;
-  border: 2px solid rgba(241,236,226,0.5);
-  border-radius: 50%;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-}
-/* Code pattern — Website */
-.cat-code {
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 12px,
-      rgba(241,236,226,0.15) 12px,
-      rgba(241,236,226,0.15) 13px
-    );
-}
-.cat-code::before {
-  content: "< / >";
-  position: absolute;
-  bottom: 20px; right: 20px;
-  font-family: var(--font-mono), monospace;
-  font-size: 18px;
-  color: rgba(241,236,226,0.5);
-  letter-spacing: 0.05em;
-}
-/* Chart pattern — Lead Gen */
-.cat-chart::before {
-  content: "";
-  position: absolute;
-  bottom: 16px; left: 16px; right: 16px;
-  height: 70%;
-  background:
-    linear-gradient(to top, rgba(200,146,75,0.4) 20%, transparent 20%) 0 100% / 14% 100%,
-    linear-gradient(to top, rgba(200,146,75,0.3) 45%, transparent 45%) 18% 100% / 14% 100%,
-    linear-gradient(to top, rgba(200,146,75,0.5) 65%, transparent 65%) 36% 100% / 14% 100%,
-    linear-gradient(to top, rgba(200,146,75,0.35) 35%, transparent 35%) 54% 100% / 14% 100%,
-    linear-gradient(to top, rgba(200,146,75,0.6) 80%, transparent 80%) 72% 100% / 14% 100%;
-  background-repeat: no-repeat;
-}
-/* Pin pattern — Local Marketing */
-.cat-pin {
-  background-image: radial-gradient(circle at 30% 40%, rgba(241,236,226,0.12) 0%, transparent 50%);
-}
-.cat-pin::before {
-  content: "";
-  position: absolute;
-  width: 16px; height: 16px;
-  background: rgba(200,146,75,0.6);
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
-  top: 35%; left: 55%;
-}
-.cat-pin::after {
-  content: "";
-  position: absolute;
-  width: 6px; height: 6px;
-  background: rgba(241,236,226,0.6);
-  border-radius: 50%;
-  top: calc(35% + 3px); left: calc(55% + 5px);
-}
-/* Circles pattern — Social Media */
-.cat-circles::before {
-  content: "";
-  position: absolute;
-  width: 60px; height: 60px;
-  border: 2px solid rgba(241,236,226,0.25);
-  border-radius: 50%;
-  top: 20%; left: 20%;
-}
-.cat-circles::after {
-  content: "";
-  position: absolute;
-  width: 40px; height: 40px;
-  border: 2px solid rgba(200,146,75,0.35);
-  border-radius: 50%;
-  bottom: 20%; right: 25%;
-}
-/* Lines pattern — Email & Retention */
-.cat-lines {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 8px,
-    rgba(241,236,226,0.12) 8px,
-    rgba(241,236,226,0.12) 9px
-  );
-}
-.cat-lines::before {
-  content: "";
-  position: absolute;
-  width: 30px; height: 20px;
-  border: 2px solid rgba(241,236,226,0.4);
-  border-radius: 3px 3px 0 0;
-  top: 40%; left: 50%;
-  transform: translateX(-50%);
-}
-.cat-lines::after {
-  content: "";
-  position: absolute;
-  width: 0; height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 12px solid rgba(241,236,226,0.4);
-  top: calc(40% + 20px); left: 50%;
-  transform: translateX(-50%);
-}
-/* Dots pattern — AI & Small Business */
-.cat-dots {
-  background-image: radial-gradient(
-    rgba(241,236,226,0.2) 1.5px,
-    transparent 1.5px
-  );
-  background-size: 16px 16px;
-}
-.cat-dots::before {
-  content: "";
-  position: absolute;
-  width: 30px; height: 30px;
-  border: 2px solid rgba(200,146,75,0.4);
-  border-radius: 6px;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-/* Blocks pattern — Running the Business */
-.cat-blocks::before {
-  content: "";
-  position: absolute;
-  inset: 20px;
-  background:
-    linear-gradient(rgba(241,236,226,0.15) 1px, transparent 1px) 0 0 / 100% 33.33%,
-    linear-gradient(90deg, rgba(241,236,226,0.15) 1px, transparent 1px) 0 0 / 50% 100%;
-}
-.cat-blocks::after {
-  content: "";
-  position: absolute;
-  width: 20px; height: 20px;
-  background: rgba(200,146,75,0.3);
-  border-radius: 4px;
-  top: 30%; left: 35%;
-}
+/* Category patterns removed — using clean editorial cards with colored left borders */
 .lib-card-body {
-  padding: 18px 22px 22px;
-  display: flex; flex-direction: column; gap: 14px; flex: 1;
+  padding: 24px 28px 28px;
+  display: flex; flex-direction: column; gap: 12px; flex: 1;
 }
-.lib-card:hover { background: #fff; transform: translateY(-2px); }
+.lib-card:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(26, 24, 21, 0.08);
+}
 @media (min-width: 760px) {
   .lib-card { grid-column: span 6; }
   .lib-card.feature { grid-column: span 12; }
@@ -611,11 +454,9 @@ p { margin: 0; }
   color: var(--muted); display: flex; align-items: center; gap: 8px;
 }
 .lib-card .kind .pill {
-  background: var(--pine); color: var(--cream);
-  padding: 3px 8px; border-radius: 4px; letter-spacing: 0.1em;
+  padding: 4px 10px; border-radius: 6px; letter-spacing: 0.08em;
+  font-weight: 600;
 }
-.lib-card .kind .pill.amber { background: var(--accent); color: var(--accent-ink); }
-.lib-card .kind .pill.rust { background: var(--rust); color: #fff; }
 .lib-card h4 {
   font-family: var(--font-serif), "Newsreader", serif;
   font-size: 26px; font-weight: 500; line-height: 1.15; margin: 0; color: var(--ink);
@@ -2141,16 +1982,6 @@ p { margin: 0; }
   transition: color 0.15s;
 }
 .article-back:hover { color: var(--ink); }
-.article-hero-img {
-  width: 100%; height: 200px;
-  border-radius: 14px;
-  position: relative;
-  overflow: hidden;
-  margin: 20px 0 0;
-}
-.article-hero-img .lib-card-pattern {
-  opacity: 0.3;
-}
 .article-title {
   font-size: clamp(28px, 4vw, 44px);
   margin-top: 14px; line-height: 1.15;

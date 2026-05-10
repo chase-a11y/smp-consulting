@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Icon } from "./icons";
 import Reveal from "./reveal";
-import { getAllArticles, getCategoryVisual } from "@/lib/articles";
+import { getAllArticles, getCategoryColor } from "@/lib/articles";
 
 // Show one article from each category for variety on the homepage
 const FEATURED_SLUGS = [
@@ -15,7 +15,6 @@ const FEATURED_SLUGS = [
 
 export default function Library() {
   const allArticles = getAllArticles();
-  // Show featured articles first, then fill to 6 if any slug is missing
   const featured = FEATURED_SLUGS
     .map((slug) => allArticles.find((a) => a.slug === slug))
     .filter(Boolean);
@@ -59,20 +58,17 @@ export default function Library() {
         <Reveal delay={150}>
           <div className="lib-grid">
             {articles.map((article) => {
-              const vis = getCategoryVisual(article!.category);
+              const cat = getCategoryColor(article!.category);
               return (
                 <Link
                   key={article!.slug}
                   href={`/library/${article!.slug}`}
                   className="lib-card"
-                  style={{ textDecoration: "none", color: "inherit" }}
+                  style={{ textDecoration: "none", color: "inherit", borderLeftColor: cat.color }}
                 >
-                  <div className="lib-card-img" style={{ background: vis.bg }}>
-                    <div className={`lib-card-pattern ${vis.pattern}`} />
-                  </div>
                   <div className="lib-card-body">
                     <div className="kind">
-                      <span className="pill">{article!.category}</span>
+                      <span className="pill" style={{ background: cat.bg, color: cat.color }}>{article!.category}</span>
                     </div>
                     <h4>{article!.title}</h4>
                     <p>{article!.meta_description}</p>

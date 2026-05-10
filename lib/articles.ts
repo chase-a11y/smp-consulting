@@ -57,48 +57,20 @@ export function getArticleBySlug(slug: string): Article | null {
   };
 }
 
-// Category → premium abstract CSS visual for card headers
-// Each has a unique background + geometric pattern class
-const CATEGORY_VISUALS: Record<string, { bg: string; pattern: string }> = {
-  "Getting Found": {
-    bg: "linear-gradient(135deg, #2C3B2E 0%, #4A6B4E 60%, #6B8F6E 100%)",
-    pattern: "cat-grid",
-  },
-  "Website": {
-    bg: "linear-gradient(160deg, #1E2B3A 0%, #2D4A6B 50%, #4A7090 100%)",
-    pattern: "cat-code",
-  },
-  "Lead Gen": {
-    bg: "linear-gradient(135deg, #6B4A20 0%, #C8924B 60%, #E0A85A 100%)",
-    pattern: "cat-chart",
-  },
-  "Local Marketing": {
-    bg: "linear-gradient(150deg, #3B2E2C 0%, #7A5A4A 40%, #A08060 100%)",
-    pattern: "cat-pin",
-  },
-  "Social Media": {
-    bg: "linear-gradient(135deg, #4A2040 0%, #7A3A60 50%, #A05080 100%)",
-    pattern: "cat-circles",
-  },
-  "Email & Retention": {
-    bg: "linear-gradient(160deg, #2A3040 0%, #4A5570 50%, #6B7A90 100%)",
-    pattern: "cat-lines",
-  },
-  "AI & Small Business": {
-    bg: "linear-gradient(135deg, #1A1A2E 0%, #2D2D4A 50%, #4A4A6B 100%)",
-    pattern: "cat-dots",
-  },
-  "Running the Business": {
-    bg: "linear-gradient(150deg, #3A2A1A 0%, #6B4A2A 50%, #8B6040 100%)",
-    pattern: "cat-blocks",
-  },
+// Category → accent color for card pills and borders
+const CATEGORY_COLORS: Record<string, { color: string; bg: string }> = {
+  "Getting Found":        { color: "#2C5E3F", bg: "rgba(44, 94, 63, 0.10)" },
+  "Website":              { color: "#2D4A6B", bg: "rgba(45, 74, 107, 0.10)" },
+  "Lead Gen":             { color: "#9A6E2E", bg: "rgba(200, 146, 75, 0.12)" },
+  "Local Marketing":      { color: "#7A5A4A", bg: "rgba(122, 90, 74, 0.10)" },
+  "Social Media":         { color: "#7A3A60", bg: "rgba(122, 58, 96, 0.10)" },
+  "Email & Retention":    { color: "#4A5570", bg: "rgba(74, 85, 112, 0.10)" },
+  "AI & Small Business":  { color: "#4A4A6B", bg: "rgba(74, 74, 107, 0.10)" },
+  "Running the Business": { color: "#8B6040", bg: "rgba(139, 96, 64, 0.12)" },
 };
 
-export function getCategoryVisual(category: string) {
-  return CATEGORY_VISUALS[category] || {
-    bg: "linear-gradient(135deg, #3d4030 0%, #5d6240 100%)",
-    pattern: "cat-grid",
-  };
+export function getCategoryColor(category: string) {
+  return CATEGORY_COLORS[category] || { color: "var(--muted)", bg: "rgba(107, 93, 79, 0.10)" };
 }
 
 export function getCategories(): string[] {
