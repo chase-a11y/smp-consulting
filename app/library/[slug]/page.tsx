@@ -56,7 +56,7 @@ export default async function ArticlePage({ params }: Props) {
               href="/library"
               className="article-back"
             >
-              &larr; The Library
+              &larr; Blog
             </Link>
             <span className="pill" style={{ marginTop: 20, display: "inline-block", background: cat.bg, color: cat.color }}>
               {article.category}
@@ -92,7 +92,7 @@ export default async function ArticlePage({ params }: Props) {
 
         <div className="article-footer">
           <Link href="/library">
-            &larr; Back to the Library
+            &larr; Back to Blog
           </Link>
         </div>
       </div>

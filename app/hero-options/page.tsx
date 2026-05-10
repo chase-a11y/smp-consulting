@@ -129,7 +129,7 @@ function HeroContent({ bg }: { bg: string }) {
             <span className="btn btn-amber">
               Tell us about your business →
             </span>
-            <span className="btn btn-ghost">Browse the Library</span>
+            <span className="btn btn-ghost">Browse the Blog</span>
           </div>
           <div className="hero-tags">
             <span>Operations & Growth</span>

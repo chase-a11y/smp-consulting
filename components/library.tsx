@@ -86,7 +86,7 @@ export default function Library() {
 
         <div style={{ marginTop: 36, display: "flex", justifyContent: "center" }}>
           <Link href="/library" className="btn btn-ghost">
-            Browse the Library
+            Browse the Blog
             <Icon name="arrow-right" size={14} />
           </Link>
         </div>

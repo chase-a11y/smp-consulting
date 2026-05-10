@@ -29,7 +29,7 @@ export default function Hero() {
               <Icon name="arrow-right" size={14} />
             </Link>
             <Link className="btn btn-ghost" href="/library">
-              Browse the Library
+              Browse the Blog
             </Link>
           </div>
           <div className="hero-tags">

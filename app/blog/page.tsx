@@ -30,10 +30,10 @@ export default function BlogPage() {
             <h3>We&apos;re working on our first posts.</h3>
             <p>
               We&apos;ve got a few drafts in the works. In the meantime, check out
-              our free guides and templates in the Library.
+              our free guides and templates on the Blog.
             </p>
             <Link href="/library" className="btn btn-ghost">
-              Browse the Library
+              Browse the Blog
               <Icon name="arrow-right" size={14} />
             </Link>
           </div>

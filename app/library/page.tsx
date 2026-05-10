@@ -10,7 +10,7 @@ export default function LibraryPage() {
       <div className="page-header">
         <div className="wrap">
           <span className="eyebrow">
-            <span className="dot"></span>The Merchant Guide Library
+            <span className="dot"></span>The Merchant Guide Blog
           </span>
           <h1 style={{ marginTop: 14 }}>
             Most of what we know,{" "}

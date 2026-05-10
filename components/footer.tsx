@@ -52,10 +52,7 @@ export default function Footer() {
           <h5>Read</h5>
           <ul>
             <li>
-              <Link href="/library">The Library</Link>
-            </li>
-            <li>
-              <Link href="/blog">Blog</Link>
+              <Link href="/library">Blog</Link>
             </li>
           </ul>
         </div>
