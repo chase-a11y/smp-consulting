@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Reveal from "@/components/reveal";
+import { CategoryIcon } from "@/components/category-icons";
 import type { ArticleMeta } from "@/lib/articles";
 
 // Category accent colors (mirrors getCategoryColor in lib/articles.ts)
@@ -72,6 +73,9 @@ export default function LibraryGrid({ articles, categories }: Props) {
                 style={{ textDecoration: "none", color: "inherit", borderLeftColor: cat.color }}
               >
                 <div className="lib-card-body">
+                  <span className="lib-card-icon" style={{ color: cat.color, opacity: 0.18 }}>
+                    <CategoryIcon category={article.category} size={44} />
+                  </span>
                   <div className="kind">
                     <span className="pill" style={{ background: cat.bg, color: cat.color }}>{article.category}</span>
                   </div>

@@ -445,6 +445,16 @@ p { margin: 0; }
 .lib-card .meta .arr { transition: transform 0.2s; }
 .lib-card:hover .meta .arr { transform: translateX(4px); }
 
+.lib-card-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  line-height: 0;
+}
+.lib-card:hover .lib-card-icon { opacity: 0.28 !important; }
+
 .lib-card.feature {
   background: var(--cream);
   border-color: rgba(26, 24, 21, 0.16);

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Icon } from "./icons";
 import Reveal from "./reveal";
+import { CategoryIcon } from "./category-icons";
 import { getAllArticles, getCategoryColor } from "@/lib/articles";
 
 // Show one article from each category for variety on the homepage
@@ -67,6 +68,9 @@ export default function Library() {
                   style={{ textDecoration: "none", color: "inherit", borderLeftColor: cat.color }}
                 >
                   <div className="lib-card-body">
+                    <span className="lib-card-icon" style={{ color: cat.color, opacity: 0.18 }}>
+                      <CategoryIcon category={article!.category} size={44} />
+                    </span>
                     <div className="kind">
                       <span className="pill" style={{ background: cat.bg, color: cat.color }}>{article!.category}</span>
                     </div>

@@ -12,12 +12,12 @@ export default function LogoMark({
       viewBox="-110 -70 220 140"
       width={size}
       height={size * (140 / 220)}
-      aria-label="SMP twin-peak mark"
+      aria-label="SMP three-peak mark"
       className={className}
       style={{ display: "block" }}
     >
       <path
-        d="M -100 50 L -100 30 L -38 -50 L -20 -30 L -20 -10 L 0 -34 L 20 -10 L 20 -30 L 38 -50 L 100 30 L 100 50 L 60 50 L 60 30 L 38 4 L 20 24 L 20 50 L -20 50 L -20 24 L -38 4 L -60 30 L -60 50 Z"
+        d="M -95 50 L -95 18 L -52 -22 L -28 5 L 0 -60 L 28 5 L 52 -22 L 95 18 L 95 50 L 62 50 L 62 18 L 52 5 L 28 30 L 0 -28 L -28 30 L -52 5 L -62 18 L -62 50 Z"
         fill={fill}
       />
     </svg>
